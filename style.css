@@ -1,0 +1,194 @@
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #1d2934;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 10px;
+  /* background-color: rgb(4, 4, 184); */
+}
+
+.navbar {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 135px;
+  /* justify-content: space-between; */
+}
+
+.navbar .logo {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar .logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar .logo h2 {
+  color:#dc9f09;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.navbar .logo h2:hover {
+  color: #000;
+}
+h3 {
+  /* color:red; */
+  cursor: pointer;
+  display: flex;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 55px;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar .links a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 550;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+  color: #19e8ff;
+  text-decoration: underline;
+}
+/* end links section */
+.grid-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  /* position: fixed; */
+  border-radius: 50px;
+  color: #fff;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 20px;
+  background-color: #434343;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.calculator-grid button {
+  font-size: 25px;
+  background-color: #55400b;
+  border-radius: 30%;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  box-shadow: inset 7px 7px 10px #55400b, inset -7px -7px 20px #dc9f09,
+    7px 7px 20px #080a0a, -7px -7px 20px #855923b3;
+  color: #fff;
+}
+textarea {
+  grid-column: span 4;
+  font-size: 25px;
+  text-align: end;
+  background-color: #605f5f;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: inset 4px 5px 7px #55400b, inset -4px -4px 15px #dc9f09,
+    4px 4px 15px #080a0a;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  color: #fff;
+}
+.calculator-grid button:nth-child(n + 18) {
+  background-color: #55400b;
+}
+button:hover,
+.calculator-grid button:nth-child(n + 18):hover {
+  background-color: #55400b;
+  color: #000;
+  transition: 0.2s;
+  border-radius: 45px;
+}
+
+@media (max-width: 950px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar .logo img {
+    display: none;
+  }
+
+  .navbar .logo h2 {
+    font-size: 1.4rem;
+  }
+
+  .navbar .links {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    left: -100%;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    font-weight: bold;
+    padding-top: 60px;
+    text-align: center;
+    background: #fff;
+    transition: 0.2s ease;
+  }
+
+  .navbar .links a {
+    display: inline-flex;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #000;
+  }
+
+  .navbar .links a:hover {
+    color: #00bcd4;
+  }
+  .grid-calculator {
+    width: 90%;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 760px) {
+  .grid-calculator {
+    width: 90%;
+    height: 100vh;
+  }
+  .calculator-grid {
+    width: auto;
+  }
+}

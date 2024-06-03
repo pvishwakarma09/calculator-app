@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App| About us</title>
+    <link rel="shortcut icon" href="logo.svg" />
+</head>
+<style>
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:30px;
+    }
+    body{
+        background-color: rgb(192, 237, 237);
+        font-size: large;
+    }
+</style>
+
+<body>
+    <a href="./index.html"></a>
+
+    <div>
+        <h1>About The Calculator App</h1>
+
+        <p> " Simple implementation of a calculator in JavaScript, HTML, and possibly CSS.
+            Let's break down how each part of the code works and what it does: " <br> <br>
+            1.) HTML Structure: <br> <br> ➡️ The HTML part of this code should contain at
+            least an input field with the ID "inputtext" and a set of buttons. <br> ➡️
+            The buttons are likely labeled with numbers, arithmetic operators (+, -,
+            *, /), and control function like "AC" (all clear), "DEL" (delete), and
+            "=" (equals). <br><br> 2.) JavaScript Operations: <br> <br> ➡️ const input =
+            document.getElementById("inputtext");: This line retrieves the input
+            field from the HTML by its ID "inputtext". <br> ➡️ const buttons =
+            document.querySelectorAll("button");: This line selects all button
+            elements from the HTML. <br> ➡️ const calculate = (expression) => {...}: This
+            function takes an arithmetic expression as input evaluates it using new
+            Function(), and returns the result or an error message if the expression
+            is invalid. <br> ➡️ const operation = (buttonValue) => {...}: This function
+            is called when a button is clicked. It handles different button actions
+            based on their values. <br> ➡️ For example, if the button is a number or
+            operator, it appends it to the input field; <br> ➡️ if it's "AC", it clears the
+            input field; if it's "DEL", it deletes the last character from the input
+            field; and if it's "=", it calculates the result. <br> ➡️
+            buttons.forEach((button) => {...}): This loop adds a click event
+            listener to each button. When a button is clicked, it calls the
+            operation function with the button's value as an argument. <br> ➡️ Event
+            Listeners: Each button has an event listener attached to it. When a
+            button is clicked, the associated function (operation) is called with
+            the button's value (the text displayed on the button) as an argument. <br> ➡️
+            Error Handling: The calculate function uses a try-catch block to handle
+            potential errors that may occur during the evaluation of the expression.<br> ➡️
+            If an error occurs (e.g., due to a malformed expression), it returns the
+            string "Malformed Operation".
+        </p>
+    </div>
+    <a href="./index.html">Click to Home Section <style>a{display: flex; justify-content: center;
+    align-items: center; font-size: larger;
+    }</style></a>
+</body>
+
+</html>
